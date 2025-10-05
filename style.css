@@ -1,0 +1,86 @@
+:root{
+  --bg:#0e1220;
+  --card:#141936;
+  --ink:#eef2ff;
+  --muted:#a7b6ff;
+  --accent:#3e57ff;
+  --accent2:#ffd166;
+  --grid:#273065;
+  --ok:#2ecc71;
+  --err:#ff6b6b;
+}
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0;background:var(--bg);color:var(--ink);
+  font-family: ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Helvetica,Arial;
+}
+header{
+  padding:14px 16px;border-bottom:1px solid #222a59;background:#101538;
+}
+h1{font-size:20px;margin:0}
+.subtitle{color:var(--muted);margin:.25rem 0 0}
+
+main{
+  display:grid;grid-template-columns:320px 1fr 320px;
+  gap:16px;padding:16px;min-height:calc(100vh - 92px);
+}
+footer{
+  padding:10px 16px;border-top:1px solid #222a59;background:#101538;color:#a5b2ff
+}
+
+.card{
+  background:var(--card);border:1px solid #232b5a;border-radius:14px;padding:12px;
+  box-shadow:0 14px 30px rgba(0,0,0,.35);
+}
+
+.panel .uploader{
+  background:#0d1330;border:2px dashed #34419c;color:#cfe1ff;padding:12px;border-radius:12px;text-align:center;cursor:pointer;
+}
+.uploader:hover{border-color:#5b6cff}
+.controls{margin-top:10px}
+.controls label{display:block;font-size:13px;color:#cfe1ff;margin:.2rem 0}
+select,input,button{
+  width:100%;padding:8px;border-radius:10px;border:1px solid #2a3268;background:#0e1435;color:#eaf0ff;outline:none
+}
+select:focus,input:focus{border-color:#4f61ff;box-shadow:0 0 0 3px rgba(79,97,255,.15)}
+.param.hidden{display:none}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.buttons{display:flex;gap:8px;margin-top:10px}
+button{cursor:pointer;font-weight:600}
+button.primary{background:linear-gradient(180deg,#3e57ff,#334aff);border:1px solid #5062ff}
+button.ghost{background:#0e1331;border:1px solid #2a336a}
+button:hover{transform:translateY(-1px)}
+
+hr{border:none;border-top:1px solid #232b5a;margin:12px 0}
+
+/* Wizard */
+.wizard-buttons.two-cols{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+
+.stage{display:grid;grid-template-rows:1fr auto;gap:10px;align-items:stretch}
+canvas#canvas{
+  width:100%;height:auto;background:#000;border:1px solid #2c346e;border-radius:8px;cursor:crosshair;
+}
+.info{
+  background:#0f1437;border:1px solid #2a3168;border-radius:10px;padding:10px;font-size:14px;color:#dbe4ff
+}
+
+/* Derecha */
+.right h3{margin:6px 0 8px}
+.important-tip{
+  background:#101a4b;border:1px solid #2c3fb6;border-left:6px solid var(--accent);
+  padding:10px 12px;border-radius:10px;margin-bottom:8px;
+  color:#dfe6ff;font-size:16px;line-height:1.35;
+}
+#zoomCanvas{
+  border:1px solid #2c346e;border-radius:8px;background:#000;margin-bottom:8px;width:100%;height:auto
+}
+.math{
+  background:#0f1437;border:1px solid #2a3168;border-radius:10px;padding:10px;font-size:14px;color:#dbe4ff;min-height:160px
+}
+.math .eq{font-family: ui-monospace,SFMono-Regular,Menlo,Consolas,monospace}
+.math .ok{color:var(--ok)}
+.math .err{color:var(--err)}
+.math .hl{color:#ffd166}
+.math p{margin:.35rem 0}
+.muted{color:var(--muted);font-size:12px}
